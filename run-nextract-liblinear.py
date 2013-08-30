@@ -18,7 +18,6 @@ trainPath = os.path.join(toolsPath, "liblinear-1.93/train")
 predictPath = os.path.join(toolsPath, "liblinear-1.93/predict")                             
 libsvmScalePath = os.path.join(toolsPath, "libsvm-3.17/svm-scale")
 
-
 def parseInput(inFilename):
     with open(inFilename) as f:
         data = json.load(f)
