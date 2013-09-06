@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/global/scratch/sness/openmir/tools/python/bin/python
 
 #
 #
