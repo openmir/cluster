@@ -102,7 +102,7 @@ def run(runs,inCollection):
     
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print "Usage: run-nextract-svm.py input/runsvm.test.txt input/tiny.mf"
+        print "Usage: run-nextract-svm.py input/runsvm.test.json input/tiny.mf"
         sys.exit(1)
 
     inCommandFilename = sys.argv[1]
