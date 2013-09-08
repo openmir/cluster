@@ -1,0 +1,18 @@
+"liblinear","svmOptions":"-s 2 -c 10.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 100.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1000.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 3 -c 0.001"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 3 -c 0.01"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 3 -c 0.1"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 3 -c 1.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 3 -c 10.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 3 -c 100.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 3 -c 1000.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 4 -c 0.001"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 4 -c 0.01"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 4 -c 0.1"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 4 -c 1.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 4 -c 10.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 4 -c 100.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 4 -c 1000.0"}
+{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale"
