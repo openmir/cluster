@@ -12,4 +12,3 @@
 {"table":"obv-1-mfcc","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 160","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1.0"}
 {"table":"obv-1-mfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 160","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1.0"}
 {"table":"obv-1-mfcc","extractOptions":"--mfcc -ws 8192 -hp 4096 -m 160","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1.0"}
-
