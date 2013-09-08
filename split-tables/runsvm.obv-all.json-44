@@ -1,0 +1,4 @@
+{"table":"obv-4-differentFeatures","extractOptions":"--rlf -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-4-differentFeatures","extractOptions":"--flx -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-4-differentFeatures","extractOptions":"--kurtosis -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-4-differentFeatures","extractOptions":"--skewness -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}

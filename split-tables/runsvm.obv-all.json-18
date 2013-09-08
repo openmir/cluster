@@ -1,15 +1,4 @@
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 50  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 200 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 1000","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 1   ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 10  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 20  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 50  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 100 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 200 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-5-downsampling","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 -ds 1000","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-1.5-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 2048  -hp 16    -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-1.5-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 2048  -hp 32    -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-1.5-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 2048  -hp 64    -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-1.5-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 2048  -hp 128   -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

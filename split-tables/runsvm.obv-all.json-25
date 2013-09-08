@@ -1,0 +1,4 @@
+{"table":"obv-2-numMfcc","extractOptions":"--mfcc -ws 512 -hp 256 -m 10 --numMfccs 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-2-numMfcc","extractOptions":"--mfcc -ws 512 -hp 256 -m 10 --numMfccs 11","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-2-numMfcc","extractOptions":"--mfcc -ws 512 -hp 256 -m 10 --numMfccs 13","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-2-numMfcc","extractOptions":"--mfcc -ws 512 -hp 256 -m 10 --numMfccs 15","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
