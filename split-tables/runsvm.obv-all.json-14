@@ -1,11 +1,3 @@
-1 -c 1.0"}
-{"table":"obv-4-differentFeatures","extractOptions":"--sfm -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-4-differentFeatures","extractOptions":"--scf -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-4-differentFeatures","extractOptions":"--chroma -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-4-differentFeatures","extractOptions":"--rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-4-differentFeatures","extractOptions":"--yin -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-4-differentFeatures","extractOptions":"--mfcc --ctd --rlf --flx -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-4-differentFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
 {"table":"obv-4-differentFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
 {"table":"obv-4-differentFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
 {"table":"obv-4-differentFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
@@ -13,4 +5,13 @@
 {"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 512 -hp 256 --spectrogramFrames 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
 {"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 512 -hp 256 --spectrogramFrames 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
 {"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 512 -hp 256 --spectrogramFrames 10  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"ta
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 512 -hp 256 --spectrogramFrames 20  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 512 -hp 256 --spectrogramFrames 50  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 512 -hp 256 --spectrogramFrames 100 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 512 -hp 256 --spectrogramFrames 200 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 512 -hp 256 --spectrogramFrames 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 512 -hp 256 --spectrogramFrames 1000","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 1024 -hp 512 --spectrogramFrames 1   ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 1024 -hp 512 --spectrogramFrames 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 1024 -hp 512 --spectrogramFrames 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-6-spectrogramImage","extractOptions":" --spectrogram -ws 1024 -hp 512 --spectrogramFrames 10  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}

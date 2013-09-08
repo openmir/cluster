@@ -1,4 +1,3 @@
-10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 1.0"}
 {"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 10.0"}
 {"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 100.0"}
 {"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 1000.0"}
@@ -15,4 +14,4 @@
 {"table":"obv-4-differentFeatures","extractOptions":"--rms -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
 {"table":"obv-4-differentFeatures","extractOptions":"--yin -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
 {"table":"obv-4-differentFeatures","extractOptions":"--mfcc --ctd --rlf --flx -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-4-differentFeatures"
+{"table":"obv-4-differentFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
