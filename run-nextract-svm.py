@@ -23,8 +23,8 @@ libsvmTrainPath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-train")
 libsvmPredictPath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-predict")                             
 libsvmScalePath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-scale")
 
-DEBUG = False
-#DEBUG = True
+#DEBUG = False
+DEBUG = True
 
 def parseInput(inFilename):
     data = []
@@ -55,6 +55,11 @@ def runExtract(run,inCollection):
     run['extractOutput'] = commands.getoutput(run['extractCommand'])
     run['extractTime'] = time.time() - startTime
 
+    if DEBUG:
+        print "extractCommand=%s" % (run['extractCommand'])
+        print "extractOutput=%s" % (run['extractOutput'])
+        print "extractTime=%s" % (run['extractTime'])
+
 def runScale(run):
     """ Scale the data with libsvm/scale. """
     if run['scale'] == 'false':
@@ -64,14 +69,24 @@ def runScale(run):
     startTime = time.time()
     run['scaleOutput'] = commands.getoutput(run['scaleCommand'])
     run['scaleTime'] = time.time() - startTime
-    
+
+    if DEBUG:
+        print "scaleCommand=%s" % (run['scaleCommand'])
+        print "scaleOutput=%s" % (run['scaleOutput'])
+        print "scaleTime=%s" % (run['scaleTime'])
+
 def runTrain(run):
     """ Train a model with a classifier. """
     # TODO(sness) - Change to allow libsvm or liblinear to be used
-    run['trainCommand'] = "%s %s %s" % (liblinearTrainPath, run['scaleFilename'], run['modelFilename'])
+    run['trainCommand'] = "%s %s %s %s" % (liblinearTrainPath, run['svmOptions'], run['scaleFilename'], run['modelFilename'])
     startTime = time.time()
     run['trainOutput'] = commands.getoutput(run['trainCommand'])
     run['trainTime'] = time.time() - startTime
+
+    if DEBUG:
+        print "trainCommand=%s" % (run['trainCommand'])
+        print "trainOutput=%s" % (run['trainOutput'])
+        print "trainTime=%s" % (run['trainTime'])
 
 def runPredict(run):
     """ Predict input data with a trained model. """
@@ -80,6 +95,12 @@ def runPredict(run):
     startTime = time.time()
     run['predictOutput'] = commands.getoutput(run['predictCommand'])
     run['predictTime'] = time.time() - startTime
+
+    if DEBUG:
+        print "predictCommand=%s" % (run['predictCommand'])
+        print "predictOutput=%s" % (run['predictOutput'])
+        print "predictTime=%s" % (run['predictTime'])
+    
 
 def removeTmpFiles(run):
     os.remove(run['extractFilename'])
