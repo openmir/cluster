@@ -1,3 +1,0 @@
-{"table":"runsvm.obv-2-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 2048  -hp 4096  -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"runsvm.obv-2-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 4096  -hp 8     -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"runsvm.obv-2-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 4096  -hp 16    -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

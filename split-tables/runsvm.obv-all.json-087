@@ -1,3 +1,3 @@
-{"table":"obv-4-differentFeatures","extractOptions":"--sfm -ws 2048 -hp 4096 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-4-differentFeatures","extractOptions":"--scf -ws 2048 -hp 4096 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-4-differentFeatures","extractOptions":"--chroma -ws 2048 -hp 4096 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 1024  -hp 2048  -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 1024  -hp 4096  -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 2048  -hp 8     -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

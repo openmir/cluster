@@ -1,3 +1,3 @@
-{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 0.01"}
-{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 0.1"}
-{"table":"obv-3-liblinearParams","extractOptions":"--mfcc -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-downsampling","extractOptions":"--mfcc -ws 1024 -hp 512 -m 10 -ds 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-downsampling","extractOptions":"--mfcc -ws 1024 -hp 512 -m 10 -ds 10  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-downsampling","extractOptions":"--mfcc -ws 1024 -hp 512 -m 10 -ds 20  ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}

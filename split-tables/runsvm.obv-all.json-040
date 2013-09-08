@@ -1,3 +1,3 @@
-{"table":"obv-2-numMfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 3","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"obv-2-numMfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 4","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"obv-2-numMfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 5","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-differentFeatures","extractOptions":"--chroma -ws 2048 -hp 4096 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--sfm --scf --chroma -ws 2048 -hp 4096 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--rms -ws 2048 -hp 4096 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
