@@ -1,0 +1,24 @@
+
+runsvm.tiny.json,0
+
+runsvm.test.json,0
+
+runsvm.test-svmoptions.json,0
+
+runsvm.obv-spectrogramImage.json,0
+
+runsvm.obv-numMfcc.json,0
+
+runsvm.obv-mfcc.json,0
+
+runsvm.obv-mfcc-hopsizes.json,0
+
+runsvm.obv-liblinearParams.json,0
+
+runsvm.obv-downsampling.json,0
+
+runsvm.obv-differentFeatures.json,0
+
+runsvm.obv-allFeatures.mfccParams.json,0
+
+runsvm.obv-allFeatures.json,0
