@@ -22,6 +22,7 @@ liblinearPredictPath = os.path.join(TOOLSDIR, "liblinear-1.93/predict")
 libsvmTrainPath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-train")                             
 libsvmPredictPath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-predict")                             
 libsvmScalePath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-scale")
+wekaPath = "java -classpath %s" % (os.path.join(TOOLSDIR, "weka/weka.jar"))
 
 DEBUG = False
 #DEBUG = True
@@ -40,45 +41,84 @@ def generateFilenames(runs):
         run['randHash'] = "%032x" % random.getrandbits(128)
         # TODO(sness) - Add parameters to nextract and svm to baseFilename
         run['baseFilename'] = os.path.join(TMPDIR,'nextract-svm-%s' % (run['randHash']))
-        run['extractFilename'] = '%s.features' % (run['baseFilename'])
-        run['scaleFilename'] = '%s.scaled' % (run['baseFilename'])
+        run['extractTrainFilename'] = '%s.train.features' % (run['baseFilename'])
+        run['extractTestFilename'] = '%s.test.features' % (run['baseFilename'])
+        run['arffTrainFilename'] = '%s.train.arff' % (run['baseFilename'])
+        run['arffTestFilename'] = '%s.test.arff' % (run['baseFilename'])
+        run['scaleTrainFilename'] = '%s.train.scaled' % (run['baseFilename'])
+        run['scaleTestFilename'] = '%s.test.scaled' % (run['baseFilename'])
+        run['scaleParamsFilename'] = '%s.params.scaled' % (run['baseFilename'])
         run['modelFilename'] = '%s.model' % (run['baseFilename'])
         run['predictionFilename'] = '%s.prediction' % (run['baseFilename'])
 
     return runs
 
-def runExtract(run,inCollection):
+def runExtract(run,inTrainCollection,inTestCollection):
     """ Extract audio features. """
-    run['extractCommand'] = "%s %s %s -o %s" % (
-        nextractPath, run['extractOptions'], inCollection, run['extractFilename'])
+    run['extractTrainCommand'] = "%s %s %s -w %s -o %s" % (
+        nextractPath, run['extractOptions'], inTrainCollection, run['arffTrainFilename'], run['extractTrainFilename'])
     startTime = time.time()    
-    run['extractOutput'] = commands.getoutput(run['extractCommand'])
-    run['extractTime'] = time.time() - startTime
+    run['extractTrainOutput'] = commands.getoutput(run['extractTrainCommand'])
+    run['extractTrainTime'] = time.time() - startTime
 
+    run['extractTestCommand'] = "%s %s %s -w %s -o %s" % (
+        nextractPath, run['extractOptions'], inTestCollection, run['arffTestFilename'], run['extractTestFilename'])
+    startTime = time.time()    
+    run['extractTestOutput'] = commands.getoutput(run['extractTestCommand'])
+    run['extractTestTime'] = time.time() - startTime
+    
     if DEBUG:
-        print "extractCommand=%s" % (run['extractCommand'])
-        print "extractOutput=%s" % (run['extractOutput'])
-        print "extractTime=%s" % (run['extractTime'])
+        print "extractTrainCommand=%s" % (run['extractTrainCommand'])
+        print "extractTrainOutput=%s" % (run['extractTrainOutput'])
+        print "extractTrainTime=%s" % (run['extractTrainTime'])
+        print "extractTestCommand=%s" % (run['extractTestCommand'])
+        print "extractTestOutput=%s" % (run['extractTestOutput'])
+        print "extractTestTime=%s" % (run['extractTestTime'])
 
 def runScale(run):
     """ Scale the data with libsvm/scale. """
-    if run['scale'] == 'false':
-        print "Not scaling data"
-        return
-    run['scaleCommand'] = "%s %s > %s" % (libsvmScalePath, run['extractFilename'], run['scaleFilename'])
-    startTime = time.time()
-    run['scaleOutput'] = commands.getoutput(run['scaleCommand'])
-    run['scaleTime'] = time.time() - startTime
-
     if DEBUG:
-        print "scaleCommand=%s" % (run['scaleCommand'])
-        print "scaleOutput=%s" % (run['scaleOutput'])
-        print "scaleTime=%s" % (run['scaleTime'])
+        print "runScale"
+    if run['scale'] == 'false':
+        if DEBUG:
+            print "Not scaling data"
+        run['scaleTrainFilename'] = run['extractTrainFilename']
+        run['scaleTestFilename'] = run['extractTestFilename']
+        return
+
+    run['scaleTrainCommand'] = "%s -s %s %s > %s" % (libsvmScalePath, run['scaleParamsFilename'], run['extractTrainFilename'], run['scaleTrainFilename'])
+    startTime = time.time()
+    run['scaleTrainOutput'] = commands.getoutput(run['scaleTrainCommand'])
+    run['scaleTrainTime'] = time.time() - startTime
+
+    run['scaleTestCommand'] = "%s -r %s %s > %s" % (libsvmScalePath, run['scaleParamsFilename'], run['extractTestFilename'], run['scaleTestFilename'])
+    startTime = time.time()
+    run['scaleTestOutput'] = commands.getoutput(run['scaleTestCommand'])
+    run['scaleTestTime'] = time.time() - startTime
+    
+    if DEBUG:
+        print "scaleTrainCommand=%s" % (run['scaleTrainCommand'])
+        print "scaleTrainOutput=%s" % (run['scaleTrainOutput'])
+        print "scaleTrainTime=%s" % (run['scaleTrainTime'])
+        print "scaleTestCommand=%s" % (run['scaleTestCommand'])
+        print "scaleTestOutput=%s" % (run['scaleTestOutput'])
+        print "scaleTestTime=%s" % (run['scaleTestTime'])
 
 def runTrain(run):
     """ Train a model with a classifier. """
+    if DEBUG:
+        print "runTrain"
+        
     # TODO(sness) - Change to allow libsvm or liblinear to be used
-    run['trainCommand'] = "%s %s %s %s" % (liblinearTrainPath, run['svmOptions'], run['scaleFilename'], run['modelFilename'])
+    if run['svm'] == 'libsvm':
+        trainPath = libsvmTrainPath
+    elif run['svm'] == 'weka':
+        run['trainTime'] = 0.0
+        return
+    else:
+        trainPath = liblinearTrainPath
+
+    run['trainCommand'] = "%s %s %s %s" % (trainPath, run['svmOptions'], run['scaleTrainFilename'], run['modelFilename'])
     startTime = time.time()
     run['trainOutput'] = commands.getoutput(run['trainCommand'])
     run['trainTime'] = time.time() - startTime
@@ -90,11 +130,33 @@ def runTrain(run):
 
 def runPredict(run):
     """ Predict input data with a trained model. """
-    # TODO(sness) - Change to allow libsvm or liblinear to be used
-    run['predictCommand'] = "%s %s %s %s" % (liblinearPredictPath, run['scaleFilename'], run['modelFilename'], run['predictionFilename'])
+    if DEBUG:
+        print "runPredict"
+
+    weka = False
+    if run['svm'] == 'libsvm':
+        predictPath = libsvmPredictPath
+    elif run['svm'] == 'weka':
+        predictPath = wekaPath
+        weka = True
+    else:
+        predictPath = liblinearPredictPath
+
+    if weka == True:
+        run['predictCommand'] = "%s %s -t %s" % (predictPath, run['svmOptions'], run['arffTestFilename'])
+    else:
+        run['predictCommand'] = "%s %s %s %s" % (predictPath, run['scaleTestFilename'], run['modelFilename'], run['predictionFilename'])
+
     startTime = time.time()
     run['predictOutput'] = commands.getoutput(run['predictCommand'])
     run['predictTime'] = time.time() - startTime
+
+    if weka == True:
+        m = re.search('Stratified cross-validation ===\s+Correctly Classified Instances\s+[0-9]+\s+([0-9.]+)', run['predictOutput'])
+        run['predictAccuracy'] = float(m.group(1))
+    else:
+        run['predictAccuracy'] = run['predictOutput']
+    
 
     if DEBUG:
         print "predictCommand=%s" % (run['predictCommand'])
@@ -103,33 +165,49 @@ def runPredict(run):
     
 
 def removeTmpFiles(run):
-    os.remove(run['extractFilename'])
-    os.remove(run['scaleFilename'])
-    os.remove(run['modelFilename'])
-    os.remove(run['predictionFilename'])
+
+    if os.path.exists(run['extractTrainFilename']):
+        os.remove(run['extractTrainFilename'])
+        
+    if os.path.exists(run['extractTestFilename']):
+        os.remove(run['extractTestFilename'])
+
+    if os.path.exists(run['scaleTrainFilename']):
+        os.remove(run['scaleTrainFilename'])
+        
+    if os.path.exists(run['scaleTestFilename']):
+        os.remove(run['scaleTestFilename'])
+
+    if os.path.exists(run['modelFilename']):
+        os.remove(run['modelFilename'])
+
+    if os.path.exists(run['predictionFilename']):
+        os.remove(run['predictionFilename'])
+        
     
-def run(runs,inCollection):
+def run(runs,inTrainCollection,inTestCollection):
     if DEBUG:
         print "TOOLSDIR=%s" % (TOOLSDIR)
         print "TMPDIR=%s" % (TMPDIR)
         
     for run in runs:
-        runExtract(run,inCollection)
+        runExtract(run,inTrainCollection,inTestCollection)
         runScale(run)
         runTrain(run)
         runPredict(run)
-        print "|%s|%s|%s|%.2f|%.2f|%.2f|%s|" % (run['table'], run['extractOptions'], run['svmOptions'], run['extractTime'], run['trainTime'], run['predictTime'], run['predictOutput'])
-        removeTmpFiles(run)
+        print "|%s|%s|%s|%.2f|%.2f|%.2f|%s|" % (run['table'], run['extractOptions'], run['svmOptions'], run['extractTrainTime'] + run['extractTestTime'], run['trainTime'], run['predictTime'], run['predictAccuracy'])
+        #removeTmpFiles(run)
     
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print "Usage: run-nextract-svm.py input/runsvm.test.json input/tiny.mf"
+        print "Usage: run-nextract-svm.py input/runsvm.test.json input/train.mf input/test.mf"
         sys.exit(1)
 
     inCommandFilename = sys.argv[1]
-    inCollection = sys.argv[2]
+    inTrainCollection = sys.argv[2]
+    inTestCollection = sys.argv[3]
     runs = parseInput(inCommandFilename)
     runs = generateFilenames(runs)
-    run(runs,inCollection)
+    run(runs,inTrainCollection,inTestCollection)
         
 
