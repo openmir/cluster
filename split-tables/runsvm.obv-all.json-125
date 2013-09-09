@@ -1,3 +1,4 @@
-{"table":"obv-numMfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 21","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"obv-numMfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 25","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"obv-numMfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 30","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-numMfccs","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 3","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-numMfccs","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 4","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-numMfccs","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 5","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-numMfccs","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 6","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

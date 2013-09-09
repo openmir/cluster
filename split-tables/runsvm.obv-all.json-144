@@ -1,3 +1,4 @@
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 100 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 200 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 1.0"}
+{"table":"obv-mfcc","extractOptions":"--mfcc -ws 1024 -hp 512  -m 1  ","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-mfcc","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 1  ","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-mfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 1  ","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-mfcc","extractOptions":"--mfcc -ws 8192 -hp 4096 -m 1  ","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

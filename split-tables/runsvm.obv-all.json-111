@@ -1,3 +1,4 @@
-{"table":"obv-mfcc","extractOptions":"--mfcc -ws 8192 -hp 4096 -m 160","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"obv-3-numMfcc","extractOptions":"--mfcc -ws 512 -hp 256 -m 10 --numMfccs 1","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"obv-3-numMfcc","extractOptions":"--mfcc -ws 512 -hp 256 -m 10 --numMfccs 2","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 1024  -hp 32    -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 1024  -hp 64    -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 1024  -hp 128   -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 1024  -hp 256   -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
