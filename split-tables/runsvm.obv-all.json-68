@@ -1,4 +1,0 @@
-{"table":"obv-differentFeatures","extractOptions":"--sfm --scf --chroma -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-differentFeatures","extractOptions":"--rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-differentFeatures","extractOptions":"--yin -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-differentFeatures","extractOptions":"--mfcc --ctd --rlf --flx -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

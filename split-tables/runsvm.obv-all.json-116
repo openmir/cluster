@@ -1,4 +1,1 @@
-{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 4096  -hp 32    -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 4096  -hp 64    -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 4096  -hp 128   -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
-{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 4096  -hp 256   -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 2048 -hp 1024 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 5 -c 1.0"}

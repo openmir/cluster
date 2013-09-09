@@ -1,0 +1,1 @@
+{"table":"runsvm.obv-mfcc-hopsizes.json","extractOptions":"--mfcc -ws 512  -hp 16     -m 10","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

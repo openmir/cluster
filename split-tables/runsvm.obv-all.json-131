@@ -1,4 +1,1 @@
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 256 -hp 128 --spectrogramFrames 1   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 256 -hp 128 --spectrogramFrames 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 256 -hp 128 --spectrogramFrames 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 256 -hp 128 --spectrogramFrames 10  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 2048 -hp 1024 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 10.0"}

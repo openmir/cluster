@@ -1,1 +1,1 @@
-{"table":"obv-mfcc","extractOptions":"--mfcc -ws 8192 -hp 4096 -m 160","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 3 -c 0.01"}
