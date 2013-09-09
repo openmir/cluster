@@ -8,8 +8,9 @@ echo $1
 
 echo "TMPDIR=$TMPDIR"
 echo "COMMAND_FILE=$COMMAND_FILE"
-echo "COLLECTION_FILE=$COLLECTION_FILE"
+echo "TRAIN_COLLECTION_FILE=$TRAIN_COLLECTION_FILE"
+echo "TEST_COLLECTION_FILE=$TEST_COLLECTION_FILE"
 
-/home/sness/pDEV/openmir/cluster/run-nextract-svm.py $COMMAND_FILE $COLLECTION_FILE
+/home/sness/pDEV/openmir/cluster/run-nextract-svm.py $COMMAND_FILE $TRAIN_COLLECTION_FILE $TEST_COLLECTION_FILE
 
 echo "Program run-nextract-svm.pbs finished with exit code $? at: `date`"
