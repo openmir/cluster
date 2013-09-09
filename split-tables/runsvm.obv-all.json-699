@@ -1,1 +1,0 @@
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 512 -hp 256 --spectrogramFrames 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

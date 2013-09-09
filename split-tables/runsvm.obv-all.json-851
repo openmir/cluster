@@ -1,1 +1,0 @@
-{"table":"obv-mfcc","extractOptions":"--mfcc -ws 256  -hp 128  -m 80 ","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

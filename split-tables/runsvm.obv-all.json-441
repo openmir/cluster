@@ -1,1 +1,0 @@
-{"table":"obv-libsvm-poly","extractOptions":"--mfcc --ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 1 -d 1  -c 1.0    -g 1.0    "}

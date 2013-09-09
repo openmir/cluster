@@ -1,0 +1,20 @@
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 6 -c 10.0"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 6 -c 100.0"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 6 -c 1000.0"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 0.001"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 0.01"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 0.1"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 1.0"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 10.0"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 100.0"}
+{"table":"obv-allFeatures","extractOptions":"--mfcc --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 7 -c 1000.0"}
+{"table":"obv-differentFeatures","extractOptions":"--mfcc -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--mfcc -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--ctd -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--rlf -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--flx -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--kurtosis -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--skewness -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--sfm -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--scf -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-differentFeatures","extractOptions":"--chroma -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

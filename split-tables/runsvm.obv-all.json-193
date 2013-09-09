@@ -1,1 +1,0 @@
-{"table":"obv-differentFeatures","extractOptions":"--rlf -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

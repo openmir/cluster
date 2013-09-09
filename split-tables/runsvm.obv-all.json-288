@@ -1,1 +1,0 @@
-{"table":"obv-downsampling","extractOptions":"--mfcc -ws 512 -hp 256 -m 10 -ds 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

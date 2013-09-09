@@ -1,1 +1,0 @@
-{"table":"obv-liblinearParams","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 5 -c 1000.0"}
