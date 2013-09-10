@@ -24,8 +24,8 @@ libsvmPredictPath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-predict")
 libsvmScalePath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-scale")
 wekaPath = "java -classpath %s" % (os.path.join(TOOLSDIR, "weka/weka.jar"))
 
-#DEBUG = False
-DEBUG = True
+DEBUG = False
+#DEBUG = True
 
 def parseInput(inFilename):
     data = []
@@ -47,7 +47,7 @@ def generateFilenames(runs):
         run['arffTestFilename'] = '%s.test.arff' % (run['baseFilename'])
         run['scaleTrainFilename'] = '%s.train.scaled' % (run['baseFilename'])
         run['scaleTestFilename'] = '%s.test.scaled' % (run['baseFilename'])
-        run['scaleParamsFilename'] = '%s.params.scaled' % (run['baseFilename'])
+        run['scaleParamsFilename'] = '%s.params' % (run['baseFilename'])
         run['modelFilename'] = '%s.model' % (run['baseFilename'])
         run['predictionFilename'] = '%s.prediction' % (run['baseFilename'])
 
@@ -128,6 +128,7 @@ def runTrain(run):
         print "trainOutput=%s" % (run['trainOutput'])
         print "trainTime=%s" % (run['trainTime'])
 
+
 def runPredict(run):
     """ Predict input data with a trained model. """
     if DEBUG:
@@ -160,7 +161,6 @@ def runPredict(run):
     else:
         run['predictAccuracy'] = run['predictOutput']
     
-
     if DEBUG:
         print "predictCommand=%s" % (run['predictCommand'])
         print "predictOutput=%s" % (run['predictOutput'])
