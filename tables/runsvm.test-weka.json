@@ -1,3 +1,1 @@
 {"table":"test-weka","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 1","scale":"false","svm":"weka","svmOptions":"weka.classifiers.bayes.NaiveBayes"}
-{"table":"test-weka","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 1","scale":"false","svm":"weka","svmOptions":"weka.classifiers.trees.J48"}
-{"table":"test-weka","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 1","scale":"false","svm":"weka","svmOptions":"weka.classifiers.trees.J48 -M 20"}

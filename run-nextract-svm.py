@@ -24,8 +24,8 @@ libsvmPredictPath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-predict")
 libsvmScalePath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-scale")
 wekaPath = "java -classpath %s" % (os.path.join(TOOLSDIR, "weka/weka.jar"))
 
-DEBUG = False
-#Debug = True
+#DEBUG = False
+DEBUG = True
 
 def parseInput(inFilename):
     data = []
@@ -143,7 +143,7 @@ def runPredict(run):
         predictPath = liblinearPredictPath
 
     if weka == True:
-        run['predictCommand'] = "%s %s -t %s" % (predictPath, run['svmOptions'], run['arffTestFilename'])
+        run['predictCommand'] = "%s %s -t %s -T %s" % (predictPath, run['svmOptions'], run['arffTrainFilename'], run['arffTestFilename'])
     else:
         run['predictCommand'] = "%s %s %s %s" % (predictPath, run['scaleTestFilename'], run['modelFilename'], run['predictionFilename'])
 
@@ -153,7 +153,10 @@ def runPredict(run):
 
     if weka == True:
         m = re.search('Stratified cross-validation ===\s+Correctly Classified Instances\s+[0-9]+\s+([0-9.]+)', run['predictOutput'])
-        run['predictAccuracy'] = float(m.group(1))
+        if m is not None:
+            run['predictAccuracy'] = float(m.group(1))
+        else:
+            run['predictAccuracy'] = -1.
     else:
         run['predictAccuracy'] = run['predictOutput']
     
