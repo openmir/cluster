@@ -1,0 +1,1 @@
+{"table":"obv-allFeatures","extractOptions":"--mfcc --numMfccs 17 --ctd --rlf --flx --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 2048 -hp 1024 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

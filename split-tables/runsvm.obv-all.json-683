@@ -1,0 +1,1 @@
+{"table":"obv-numMfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 10 --numMfccs 80","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

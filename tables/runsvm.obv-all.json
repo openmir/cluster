@@ -437,8 +437,6 @@
 {"table":"obv-libsvm-linear","extractOptions":"--mfcc --ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 10.0 "}
 {"table":"obv-libsvm-linear","extractOptions":"--mfcc --ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 100.0"}
 {"table":"obv-libsvm-linear","extractOptions":"--mfcc --ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 1000."}
-
-
 {"table":"obv-libsvm-poly","extractOptions":"--mfcc --ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 1 -d 1  -c 1.0    -g 1.0    "}
 {"table":"obv-libsvm-poly","extractOptions":"--mfcc --ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 1 -d 2  -c 1.0    -g 1.0    "}
 {"table":"obv-libsvm-poly","extractOptions":"--mfcc --ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 1 -d 3  -c 1.0    -g 1.0    "}
@@ -787,7 +785,6 @@
 {"table":"obv-weka-multilayerperceptron","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100","scale":"false","svm":"weka","svmOptions":"weka.classifiers.trees.Multilayerperceptron -L 0.5"}
 {"table":"obv-weka-multilayerperceptron","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100","scale":"false","svm":"weka","svmOptions":"weka.classifiers.trees.Multilayerperceptron -L 0.7"}
 {"table":"obv-weka-multilayerperceptron","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100","scale":"false","svm":"weka","svmOptions":"weka.classifiers.trees.Multilayerperceptron -L 0.9"}
-
 {"table":"obv-weka-naivebayes","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100","scale":"false","svm":"weka","svmOptions":"weka.classifiers.bayes.NaiveBayes"}
 {"table":"obv-weka-naivebayes","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100","scale":"false","svm":"weka","svmOptions":"weka.classifiers.bayes.NaiveBayes -D"}
 {"table":"obv-weka-naivebayes","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100","scale":"false","svm":"weka","svmOptions":"weka.classifiers.bayes.NaiveBayes -K"}
