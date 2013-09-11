@@ -24,8 +24,8 @@ libsvmPredictPath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-predict")
 libsvmScalePath = os.path.join(TOOLSDIR, "libsvm-3.17/svm-scale")
 wekaPath = "java -classpath %s" % (os.path.join(TOOLSDIR, "weka/weka.jar"))
 
-DEBUG = False
-#DEBUG = True
+#DEBUG = False
+DEBUG = True
 
 def parseInput(inFilename):
     data = []
