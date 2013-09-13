@@ -132,13 +132,17 @@ def runPredict(run):
     run['predictTime'] = time.time() - startTime
 
     if weka == True:
-        m = re.search('Stratified cross-validation ===\s+Correctly Classified Instances\s+[0-9]+\s+([0-9.]+)', run['predictOutput'])
+        m = re.search('=== Error on test data ===\s+Correctly Classified Instances\s+[0-9]+\s+([0-9.]+)', run['predictOutput'])
         if m is not None:
             run['predictAccuracy'] = float(m.group(1))
         else:
             run['predictAccuracy'] = -1.
     else:
-        run['predictAccuracy'] = run['predictOutput']
+        m = re.search('Accuracy = ([0-9.]+)', run['predictOutput'])
+        if m is not None:
+            run['predictAccuracy'] = float(m.group(1))
+        else:
+            run['predictAccuracy'] = -1.
     
     if DEBUG:
         print "predictCommand=%s" % (run['predictCommand'])
