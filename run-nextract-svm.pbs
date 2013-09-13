@@ -6,6 +6,9 @@ echo "Current working directory is `pwd`"
 echo "Starting run at: `date`"
 echo $1
 
+# Output all tmp files to current directory for debugging
+#export TMPDIR=./
+
 echo "TMPDIR=$TMPDIR"
 echo "COMMAND_FILE=$COMMAND_FILE"
 echo "TRAIN_COLLECTION_FILE=$TRAIN_COLLECTION_FILE"
