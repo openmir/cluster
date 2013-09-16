@@ -1,0 +1,50 @@
+
+runsvm.tiny.json,0
+
+runsvm.test.json,0
+
+runsvm.test-weka.json,0
+
+runsvm.test-svmoptions.json,0
+
+runsvm.test-libsvm.json,0
+
+runsvm.obv-winSizes.json,0
+
+runsvm.obv-weka-randomforest.json,0
+
+runsvm.obv-weka-naivebayes.json,0
+
+runsvm.obv-weka-multilayerperceptron.json,0
+
+runsvm.obv-weka-logistic.json,0
+
+runsvm.obv-weka-j48.json,0
+
+runsvm.obv-spectrogramImage.json,0
+
+runsvm.obv-numMfccs.json,0
+
+runsvm.obv-mfcc-hopsizes.json,0
+
+runsvm.obv-libsvm-sigmoid.json,0
+
+runsvm.obv-libsvm-rbf.json,0
+
+runsvm.obv-libsvm-poly.json,0
+
+runsvm.obv-libsvm-linear.json,0
+
+runsvm.obv-liblinearParams.json,0
+
+runsvm.obv-downsampling.json,0
+
+runsvm.obv-differentFeatures.json,0
+
+runsvm.obv-allFeatures.winSvmParams.json,0
+
+runsvm.obv-allFeatures.mfccParams.json,0
+
+runsvm.obv-all.json,0
+
+runsvm.fix-problems.json,0
