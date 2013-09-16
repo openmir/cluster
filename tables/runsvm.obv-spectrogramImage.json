@@ -1,3 +1,23 @@
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 1   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 10  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 20  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 50  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 100 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 200 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 64 -hp 32 --spectrogramFrames 1000","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 1   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 10  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 20  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 50  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 100 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 200 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 128 -hp 64 --spectrogramFrames 1000","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
 {"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 256 -hp 128 --spectrogramFrames 1   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
 {"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 256 -hp 128 --spectrogramFrames 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
 {"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 256 -hp 128 --spectrogramFrames 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
@@ -28,23 +48,3 @@
 {"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 1024 -hp 512 --spectrogramFrames 200 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
 {"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 1024 -hp 512 --spectrogramFrames 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
 {"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 1024 -hp 512 --spectrogramFrames 1000","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 1   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 10  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 20  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 50  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 100 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 200 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 1000","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 1   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 2   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 5   ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 10  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 20  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 50  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 100 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 200 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 500 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 4096 -hp 2048 --spectrogramFrames 1000","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
