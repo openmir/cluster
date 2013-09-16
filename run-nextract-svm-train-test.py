@@ -159,7 +159,11 @@ def runPredict(run):
         else:
             run['predictAccuracy'] = -1.
     else:
-        run['predictAccuracy'] = run['predictOutput']
+        m = re.search('Accuracy = ([0-9.]+)', run['predictOutput'])
+        if m is not None:
+            run['predictAccuracy'] = float(m.group(1))
+        else:
+            run['predictAccuracy'] = -1.
     
     if DEBUG:
         print "predictCommand=%s" % (run['predictCommand'])
