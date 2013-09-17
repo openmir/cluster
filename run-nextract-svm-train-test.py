@@ -202,7 +202,7 @@ def run(runs,inTrainCollection,inTestCollection):
         runScale(run)
         runTrain(run)
         runPredict(run)
-        print "|%s|%s|%s|%.2f|%.2f|%.2f|%s|" % (run['table'], run['extractOptions'], run['svmOptions'], run['extractTrainTime'] + run['extractTestTime'], run['trainTime'], run['predictTime'], run['predictAccuracy'])
+        print "|obv-%s|%s|%s|%.2f|%.2f|%.2f|%s|" % (run['table'], run['extractOptions'], run['svmOptions'], run['extractTrainTime'] + run['extractTestTime'], run['trainTime'], run['predictTime'], run['predictAccuracy'])
         #removeTmpFiles(run)
     
 if __name__ == "__main__":
