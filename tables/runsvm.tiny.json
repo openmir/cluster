@@ -1,1 +1,1 @@
-{"table":"spectrogramImage","extractOptions":"--scf -ws 256 -hp 128 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"test","extractOptions":"--mfcc --numMfccs 50 --centroid --rolloff --flux --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 1024 -hp 512 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

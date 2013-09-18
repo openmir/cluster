@@ -29,11 +29,7 @@ def run():
         item['extractTime'] = float(a[4])
         item['trainTime'] = float(a[5])
         item['predictTime'] = float(a[6])
-        m = re.search('Accuracy = ([0-9.]*)% \(([0-9]*)/([0-9]*)', a[7])
-        if m is not None:
-            item['accuracy'] = float(m.group(1))
-            item['accuracyMatch'] = float(m.group(2))
-            item['accuracyTotal'] = float(m.group(3))
+        item['accuracy'] = float(a[7])
 
         key = "%s_%s_%s" % (item['table'], item['extractOptions'], item['svmOptions'])
 
@@ -55,15 +51,11 @@ def run():
         trainTimes = []
         predictTimes = []
         accuracies = []
-        accuracyMatches = []
-        accuracyTotals = []
         for item in data[n]['items']:
             extractTimes.append(item['extractTime'])
             trainTimes.append(item['trainTime'])
             predictTimes.append(item['predictTime'])
             accuracies.append(item['accuracy'])
-            accuracyMatches.append(item['accuracyMatch'])
-            accuracyTotals.append(item['accuracyTotal'])
 
         # print "accuracies="
         # print accuracies
@@ -82,16 +74,12 @@ def run():
 
         data[n]['accuraciesMean'] = np.mean(accuracies)
         data[n]['accuraciesStd'] = np.mean(accuracies)
-        data[n]['accuracyMatchesMean'] = np.mean(accuracyMatches)
-        data[n]['accuracyMatchesStd'] = np.mean(accuracyMatches)
-        data[n]['accuracyTotalsMean'] = np.mean(accuracyTotals)
-        data[n]['accuracyTotalsStd'] = np.mean(accuracyTotals)
 
     for n in data:
-        print "|%s|%s|%s|%.2f|%.2f|%.2f|%.2f (%i/%i)|" % (
+        print "|%s|%s|%s|%.2f|%.2f|%.2f|%.2f|" % (
             data[n]['items'][0]['table'],data[n]['items'][0]['extractOptions'],data[n]['items'][0]['svmOptions'],
             data[n]['extractTimesMean'],data[n]['trainTimesMean'],data[n]['predictTimesMean'],
-            data[n]['accuraciesMean'], data[n]['accuracyMatchesMean'], data[n]['accuracyTotalsMean'])
+            data[n]['accuraciesMean'])
     
 if __name__ == "__main__":
     if len(sys.argv) < 1:
