@@ -1,1 +1,1 @@
-{"table":"obv-differentFeatures","extractOptions":"--scf -ws 4096 -hp 2048 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"downsampling","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100 ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

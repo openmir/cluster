@@ -1,1 +1,1 @@
-{"table":"obv-libsvm-sigmoid","extractOptions":"--mfcc -ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 3 -d 5  -r 10.0   -g 0.001  "}
+{"table":"libsvm-sigmoid","extractOptions":"---mfcc --centroid --rolloff --flux --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 3 -d 5  -r 100.0  -g 100.0  "}

@@ -1,1 +1,1 @@
-{"table":"obv-differentFeatures","extractOptions":"--yin -ws 512 -hp 256 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"differentFeatures","extractOptions":"--yin -ws 2048 -hp 1024 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

@@ -1,1 +1,1 @@
-{"table":"obv-weka-logistic","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100","scale":"false","svm":"weka","svmOptions":"weka.classifiers.functions.Logistic -R 1.0E-9 "}
+{"table":"mfcc","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 20 ","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

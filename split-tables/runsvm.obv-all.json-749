@@ -1,1 +1,1 @@
-{"table":"obv-weka-j48","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100","scale":"false","svm":"weka","svmOptions":"weka.classifiers.trees.J48 -M 10"}
+{"table":"mfcc","extractOptions":"--mfcc -ws 8192 -hp 4096 -m 10 ","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}

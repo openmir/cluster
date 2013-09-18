@@ -1,1 +1,1 @@
-{"table":"obv-spectrogramImage","extractOptions":"--spectrogram -ws 2048 -hp 1024 --spectrogramFrames 20  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"weka-randomforest","extractOptions":"--mfcc --centroid --rolloff --flux --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 2048 -hp 1024 -m 10 -ds 1","scale":"false","svm":"weka","svmOptions":"weka.classifiers.trees.RandomForest -I 10"}

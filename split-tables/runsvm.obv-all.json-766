@@ -1,1 +1,1 @@
-{"table":"obv-weka-multilayerperceptron","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 100","scale":"false","svm":"weka","svmOptions":"weka.classifiers.trees.Multilayerperceptron -H 2 -N 5"}
+{"table":"mfcc","extractOptions":"--mfcc -ws 4096 -hp 2048 -m 80 ","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
