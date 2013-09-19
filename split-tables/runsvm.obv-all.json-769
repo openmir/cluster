@@ -1,1 +1,1 @@
-{"table":"mfcc","extractOptions":"--mfcc -ws 512  -hp 256  -m 160","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
+{"table":"mfcc","extractOptions":"--mfcc -ws 8192 -hp 4096 -m 5  ","scale":"true","svm":"liblinear","svmOptions":"-c 1.0 -s 1"}
