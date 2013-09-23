@@ -1,7 +1,7 @@
-{"table":"libsvm-linear","extractOptions":"--mfcc -ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 0.001"}
-{"table":"libsvm-linear","extractOptions":"--mfcc -ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 0.01 "}
-{"table":"libsvm-linear","extractOptions":"--mfcc -ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 0.1  "}
-{"table":"libsvm-linear","extractOptions":"--mfcc -ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 1.0  "}
-{"table":"libsvm-linear","extractOptions":"--mfcc -ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 10.0 "}
-{"table":"libsvm-linear","extractOptions":"--mfcc -ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 100.0"}
-{"table":"libsvm-linear","extractOptions":"--mfcc -ds 1000 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 1000."}
+{"table":"libsvm-linear","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 0.001"}
+{"table":"libsvm-linear","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 0.01 "}
+{"table":"libsvm-linear","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 0.1  "}
+{"table":"libsvm-linear","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 1.0  "}
+{"table":"libsvm-linear","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 10.0 "}
+{"table":"libsvm-linear","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 100.0"}
+{"table":"libsvm-linear","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 1000."}

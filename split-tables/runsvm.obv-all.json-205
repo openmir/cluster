@@ -1,1 +1,0 @@
-{"table":"differentFeatures","extractOptions":"--mfcc --centroid --rolloff --flux --kurtosis --skewness --sfm --scf --chroma -ws 1024 -hp 512 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}

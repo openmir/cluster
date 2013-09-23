@@ -1,1 +1,1 @@
-{"table":"allFeatures-winSvmParams","extractOptions":"--mfcc --centroid --rolloff --flux --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 1024 -hp 512 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 1 -c 0.001"}
+{"table":"libsvm-poly","extractOptions":"--mfcc -ds 1 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 1 -d 3  -c 0.001  -g 0.01   "}

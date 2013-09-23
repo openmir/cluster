@@ -1,1 +1,1 @@
-{"table":"allFeatures-mfccParams","extractOptions":"--mfcc --numMfccs 5 --centroid --rolloff --flux --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 2048 -hp 1024 -m 10","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
+{"table":"libsvm-linear","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 0 -c 1000."}

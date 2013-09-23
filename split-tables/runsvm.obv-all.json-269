@@ -1,1 +1,0 @@
-{"table":"downsampling","extractOptions":"--mfcc -ws 2048 -hp 1024 -m 10 -ds 50  ","scale":"true","svm":"liblinear","svmOptions":"-s 2 -c 1.0"}
