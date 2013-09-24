@@ -48,6 +48,7 @@ def generateFilenames(runs):
         run['extractTestFilename'] = '%s.test.features' % (run['baseFilename'])
         run['extractTestCollectionFilename'] = '%s.test.mf' % (run['baseFilename'])
         run['arffTrainFilename'] = '%s.train.arff' % (run['baseFilename'])
+        run['arffWekaRawTestFilename'] = '%s.test.wekaraw.arff' % (run['baseFilename'])
         run['arffTestFilename'] = '%s.test.arff' % (run['baseFilename'])
         run['scaleTrainFilename'] = '%s.train.scaled' % (run['baseFilename'])
         run['scaleTestFilename'] = '%s.test.scaled' % (run['baseFilename'])
@@ -124,36 +125,70 @@ def runTrain(run):
     if run['svm'] == 'libsvm':
         trainPath = libsvmTrainPath
     elif run['svm'] == 'weka':
-        run['trainTime'] = 0.0
-        return
+        trainPath = wekaPath
+        weka = True
     else:
         trainPath = liblinearTrainPath
 
-    run['trainCommand'] = "%s %s %s %s" % (trainPath, run['svmOptions'], run['scaleTrainFilename'], run['modelFilename'])
+    if weka == True:
+        run['trainCommand'] = "%s %s -t %s -d %s" % (trainPath, run['svmOptions'], run['arffTrainFilename'], run['modelFilename'])
+    else:
+        run['trainCommand'] = "%s %s %s %s" % (trainPath, run['svmOptions'], run['scaleTrainFilename'], run['modelFilename'])
+
     startTime = time.time()
     run['trainOutput'] = commands.getoutput(run['trainCommand'])
     run['trainTime'] = time.time() - startTime
-
+        
     if DEBUG:
         print "trainCommand=%s" % (run['trainCommand'])
         print "trainOutput=%s" % (run['trainOutput'])
         print "trainTime=%s" % (run['trainTime'])
 
+def copyAttributesFromTrainingSetToTestSet(run):
+    print "copyAttributesFromTrainingSetToTestSet"
+    
+    f = open(run['arffTrainFilename'],'r')
+    line = f.readline()
+    while line:
+        m = re.search('@attribute output {(.*)}', line)
+        if m is not None:
+            attributes = m.group(1)
+            break
+        line = f.readline()
+    f.close()
+
+    fin = open(run['arffWekaRawTestFilename'],'r')
+    fout = open(run['arffTestFilename'],'w')
+    line = fin.readline()
+    while line:
+        m = re.search('@attribute output {(.*)}', line)
+        if m is not None:
+            fout.write("@attribute output {%s}\n" % attributes)
+        else:
+            fout.write(line)
+        line = fin.readline()
+        
+    fin.close()
+    fout.close()
+
+    
 def runExtractTest(run,testFilename,testLabel):
     # Create temporary collection file for this one file
     # testFilename
-    # run['extractTestCollectionFilename']
     f = open(run['extractTestCollectionFilename'],'w')
     f.write("%s\t%s\n" % (testFilename,testLabel))
     f.close()
     
     """ Extract audio features. """
     run['extractTestCommand'] = "%s %s %s -w %s -o %s" % (
-        nextractPath, run['extractOptions'], run['extractTestCollectionFilename'], run['arffTestFilename'], run['extractTestFilename'])
+        nextractPath, run['extractOptions'], run['extractTestCollectionFilename'], run['arffWekaRawTestFilename'], run['extractTestFilename'])
     startTime = time.time()    
     run['extractTestOutput'] = commands.getoutput(run['extractTestCommand'])
     run['extractTestTime'] = time.time() - startTime
 
+    # Copy attributes from training set arff file to test set arff file
+    copyAttributesFromTrainingSetToTestSet(run)
+    
     if DEBUG:
         print "runExtractTest %s" % (testFilename)
         print "extractTestCommand=%s" % (run['extractTestCommand'])
@@ -196,7 +231,7 @@ def runPredictTest(run):
         predictPath = liblinearPredictPath
 
     if weka == True:
-        run['predictCommand'] = "%s %s -t %s -T %s" % (predictPath, run['svmOptions'], run['arffTrainFilename'], run['arffTestFilename'])
+        run['predictCommand'] = "%s %s -l %s -T %s -p 0" % (predictPath, run['svmOptions'], run['modelFilename'], run['arffTestFilename'])
     else:
         run['predictCommand'] = "%s %s %s %s" % (predictPath, run['scaleTestFilename'], run['modelFilename'], run['predictionFilename'])
 
@@ -224,6 +259,59 @@ def runPredictTest(run):
 
 
 def runGetPredictAccuracy(run,testLabel):
+
+    if run['svm'] == 'weka':
+        runGetWekaPredictAccuracy(run,testLabel)
+    else:
+        runGetLibSvmPredictAccuracy(run,testLabel)
+
+
+def runGetWekaPredictAccuracy(run,testLabel):
+    print "runGetWekaPredictAccuracy"
+    
+    # print "testLabel=%s" % testLabel
+
+    # print "run['predictOutput']"
+    # print run['predictOutput']
+
+    labelCounts = {}    
+    for line in run['predictOutput'].splitlines():
+        m = re.search(' +([0-9]*) +([0-9]*):([0-9A-Z]*) +([0-9]*):([0-9A-Z]*) +[+] +([0-9]*)', line)
+        if m is not None:
+            # inst = m.group(1)
+            # actualNum = m.group(2)
+            # actualLabel = m.group(3)
+            # predictedNum = m.group(4)
+            label = m.group(5)
+            # error = m.group(6)
+
+            if label not in labelCounts:
+                labelCounts[label] = 0
+                
+            labelCounts[label] += 1
+
+    maxLabel = max(labelCounts, key = lambda x: labelCounts.get(x) )
+
+    if DEBUG:
+        pp.pprint(labelCounts)
+        print "maxLabel=%s" % maxLabel
+    
+    if maxLabel == testLabel:
+        labelCorrect = True
+    else:
+        labelCorrect = False
+
+    if DEBUG:
+        if labelCorrect:
+            print "****************************** Label correct"
+        else:
+            print "############################## Label incorrect"
+
+    return labelCorrect
+            
+
+    
+def runGetLibSvmPredictAccuracy(run,testLabel):
     # print "runGetPredictAccuracy"
     # Read in prediction file
     inPrediction = open(run['predictionFilename'], "r")
