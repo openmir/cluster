@@ -262,15 +262,17 @@ def runPredictTest(run):
 def runGetPredictAccuracy(run,testLabel):
 
     if run['svm'] == 'weka':
-        runGetWekaPredictAccuracy(run,testLabel)
+        labelCorrect = runGetWekaPredictAccuracy(run,testLabel)
     else:
-        runGetLibSvmPredictAccuracy(run,testLabel)
+        labelCorrect = runGetLibSvmPredictAccuracy(run,testLabel)
+
+    return labelCorrect
 
 
 def runGetWekaPredictAccuracy(run,testLabel):
     print "runGetWekaPredictAccuracy"
     
-    # print "testLabel=%s" % testLabel
+    print "testLabel=%s" % testLabel
 
     print "run['predictOutput']"
     print run['predictOutput']
