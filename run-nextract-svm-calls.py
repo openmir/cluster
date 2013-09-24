@@ -231,7 +231,8 @@ def runPredictTest(run):
         predictPath = liblinearPredictPath
 
     if weka == True:
-        run['predictCommand'] = "%s %s -l %s -T %s -p 0" % (predictPath, run['svmOptions'], run['modelFilename'], run['arffTestFilename'])
+        wekaClassifier = run['svmOptions'].split()[0]
+        run['predictCommand'] = "%s %s -l %s -T %s -p 0" % (predictPath, wekaClassifier, run['modelFilename'], run['arffTestFilename'])
     else:
         run['predictCommand'] = "%s %s %s %s" % (predictPath, run['scaleTestFilename'], run['modelFilename'], run['predictionFilename'])
 
@@ -271,12 +272,12 @@ def runGetWekaPredictAccuracy(run,testLabel):
     
     # print "testLabel=%s" % testLabel
 
-    # print "run['predictOutput']"
-    # print run['predictOutput']
+    print "run['predictOutput']"
+    print run['predictOutput']
 
     labelCounts = {}    
     for line in run['predictOutput'].splitlines():
-        m = re.search(' +([0-9]*) +([0-9]*):([0-9A-Z]*) +([0-9]*):([0-9A-Z]*) +[+] +([0-9]*)', line)
+        m = re.search(' +([0-9]*) +([0-9]*):([0-9A-Z]*) +([0-9]*):([0-9A-Z]*) +[+]* +([0-9.]*)', line)
         if m is not None:
             # inst = m.group(1)
             # actualNum = m.group(2)
@@ -290,6 +291,9 @@ def runGetWekaPredictAccuracy(run,testLabel):
                 
             labelCounts[label] += 1
 
+
+    print "labelCounts"
+    print labelCounts
     maxLabel = max(labelCounts, key = lambda x: labelCounts.get(x) )
 
     if DEBUG:
