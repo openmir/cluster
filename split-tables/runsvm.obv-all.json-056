@@ -1,1 +1,1 @@
-{"table":"weka-randomforest","extractOptions":"--mfcc --centroid --rolloff --flux --kurtosis --skewness --sfm --scf --chroma --yin --rms -ws 2048 -hp 1024 -m 10 -ds 1","scale":"false","svm":"weka","svmOptions":"weka.classifiers.trees.RandomForest -K 2"}
+{"table":"libsvm-poly","extractOptions":"--mfcc --centroid --rolloff --flux --kurtosis --skewness --sfm --scf --chroma --yin --rms  -ds 1 -ws 2048 -hp 1024 -m 10","scale":"true","svm":"libsvm","svmOptions":"-t 1 -d 3  -c 1000.0 -g 100.0  "}
