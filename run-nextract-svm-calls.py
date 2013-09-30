@@ -55,6 +55,7 @@ def generateFilenames(runs):
         run['scaleParamsFilename'] = '%s.params' % (run['baseFilename'])
         run['modelFilename'] = '%s.model' % (run['baseFilename'])
         run['predictionFilename'] = '%s.prediction' % (run['baseFilename'])
+        run['predictTime'] = 0.0
 
     return runs
 
@@ -238,7 +239,7 @@ def runPredictTest(run):
 
     startTime = time.time()
     run['predictOutput'] = commands.getoutput(run['predictCommand'])
-    run['predictTime'] = time.time() - startTime
+    run['predictTime'] = run['predictTime'] + (time.time() - startTime)
 
     # if weka == True:
     #     m = re.search('=== Error on test data ===\s+Correctly Classified Instances\s+[0-9]+\s+([0-9.]+)', run['predictOutput'])
@@ -384,7 +385,7 @@ def runPredict(run,inTestCollectionFilename):
         total += 1
         line = inTestCollection.readline()
 
-    accuracy = float(correct) / float(total)
+    accuracy = (float(correct) / float(total)) * 100.0
     print "|calls-%s|%s|%s|%.2f|%.2f|%.2f|%.2f|" % (run['table'], run['extractOptions'], run['svmOptions'], run['extractTrainTime'], run['trainTime'], run['predictTime'], accuracy)    
     
 
