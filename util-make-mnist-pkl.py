@@ -25,8 +25,8 @@ DEBUG = True
 
 NUM_COLUMNS = 784
 TRAIN_ROWS = 50000
-VALID_ROWS = 50000
-TEST_ROWS = 50000
+VALID_ROWS = 10000
+TEST_ROWS = 10000
 
 
 def runOne(inFilename,numRows,numColumns):
@@ -62,7 +62,8 @@ def run(inTrainFilename,inValidFilename,inTestFilename,outFilename):
     validData = runOne(inValidFilename, VALID_ROWS, NUM_COLUMNS)
     testData = runOne(inTestFilename, TEST_ROWS, NUM_COLUMNS)
 
-    f = gzip.open(outFilename, 'wb')
+    # f = gzip.open(outFilename, 'wb')
+    f = open(outFilename, 'wb')
     cPickle.dump((trainData,validData,testData), f)
     f.close()
     
