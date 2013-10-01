@@ -1,4 +1,4 @@
-#!/global/scratch/sness/openmir/tools/python/bin/python
+#!/usr/bin/python
 
 #
 #
@@ -20,29 +20,32 @@ import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
 MNIST_ZEROS = False
-DEBUG = False
+#DEBUG = False
+DEBUG = True
 
-def runOne(inFilename):
+NUM_COLUMNS = 784
+TRAIN_ROWS = 50000
+VALID_ROWS = 50000
+TEST_ROWS = 50000
+
+
+def runOne(inFilename,numRows,numColumns):
+    dataSet = (np.zeros((numRows, numColumns), np.float32),np.zeros((numRows,), np.int64))
+    
     infile = open(inFilename, "r")
     line = infile.readline()
-    data = []
-    labels = []
-    i = 0
-    while line:
-        a = line.split()
-        labels.append(a[0])
-        item = []
-        for i in range(1,len(a)-1):
-            item.append(a[i].split(":")[1])
 
-        data.append(item)
+    i = 0
+    while line and i < numRows:
+        a = line.split()
+        dataSet[1][i] = (a[0])
+        j = 1
+        while j < len(a) and j < numColumns:
+            dataSet[0][i][j-1] = (a[j].split(":")[1])
+            j += 1
+
         line = infile.readline()
         i += 1
-
-    if MNIST_ZEROS:
-        dataSet = (np.zeros((50000, 784), np.float32),np.zeros((50000,), np.int64))
-    else:
-        dataSet = (np.array(data, np.float32),np.array(labels, np.int64))
 
     if DEBUG:
         pp.pprint("***dataSet")
@@ -51,13 +54,13 @@ def runOne(inFilename):
         print dataSet[0].dtype
         print dataSet[1].shape
         print dataSet[1].dtype
-        
+
     return dataSet
 
 def run(inTrainFilename,inValidFilename,inTestFilename,outFilename):
-    trainData = runOne(inTrainFilename)
-    validData = runOne(inValidFilename)
-    testData = runOne(inTestFilename)
+    trainData = runOne(inTrainFilename, TRAIN_ROWS, NUM_COLUMNS)
+    validData = runOne(inValidFilename, VALID_ROWS, NUM_COLUMNS)
+    testData = runOne(inTestFilename, TEST_ROWS, NUM_COLUMNS)
 
     f = gzip.open(outFilename, 'wb')
     cPickle.dump((trainData,validData,testData), f)
